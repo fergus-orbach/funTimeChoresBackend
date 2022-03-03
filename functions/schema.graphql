@@ -1,8 +1,34 @@
 type Message {
+  id: ID!
   from: String
   text: String
 }
 
+type Chore {
+  id: ID!
+  name: String
+}
+
+type User {
+  id: ID!
+  deviceToken: String
+}
+
 type Query {
-  messages : [Message]
+  messages: [Message]
+  chores: [Chore]
+}
+
+type Mutation {
+  newChore(input: NewChoreInput!): Chore
+  registerUserDevice(input: RegisterUserDeviceInput!): Boolean
+  deregisterUserDevice: Boolean
+}
+
+input NewChoreInput {
+  name: String
+}
+
+input RegisterUserDeviceInput {
+  deviceToken: String!
 }
