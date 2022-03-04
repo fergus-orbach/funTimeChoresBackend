@@ -27,5 +27,7 @@ module.exports = {
   rules: {
     "quotes": ["error", "double"],
     "import/no-unresolved": 0,
+    "max-len": ["error", {"code": 110}],
+    "@typescript-eslint/no-explicit-any": "off", // TODO - fix me
   },
 };

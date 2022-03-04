@@ -2,7 +2,7 @@ import * as admin from "firebase-admin";
 
 export const collections = {
   users: "users",
-  chores: "chores"
-}
+  chores: "chores",
+};
 
-export const newDb = () => admin.firestore()
+export const newDb = () => admin.firestore();

@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '16'
           check-latest: true
-      - name: Install npm packages
+      - name: Install dependencies
         run: |
           cd functions
           yarn install
