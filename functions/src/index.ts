@@ -25,7 +25,6 @@ const getIdToken = (headers: any): (string | null) => {
 
 const context = async ({req}: any) => {
   const idToken = getIdToken(req.headers);
-
   if (idToken) {
     try {
       const {uid} = await admin.auth().verifyIdToken(idToken);
@@ -45,6 +44,5 @@ server.start().then(() =>
 );
 
 export const graphql = functions
-    .region("asia-southeast2")
     .https
     .onRequest(app);
