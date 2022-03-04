@@ -44,5 +44,6 @@ server.start().then(() =>
 );
 
 export const graphql = functions
+    .region("asia-southeast2")
     .https
     .onRequest(app);
